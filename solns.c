@@ -34,4 +34,24 @@ min(int a[],int n)
    return(sum/n);
  }
 
+ mode(int a[],int n)
+ {
+   int maxvalue=0,maxcount=0,i,j;
+   for(i=0;i<n;++i)
+   {
+     int count=0;
+     for(j=0;j<n;++j)
+     {
+       if(a[j]==a[i])
+         ++count;
+     }
+     if(count>maxcount)
+     {
+       maxcount=count;
+       maxvalue=a[i];
+     }
+   }
+   return(maxvalue);
+ }
+
 
