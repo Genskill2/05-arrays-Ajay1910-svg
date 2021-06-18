@@ -96,7 +96,7 @@ int factors(int a[],int n)
     else
       i++;
   }
-  return(count);
+  return count;
 }
   
 
