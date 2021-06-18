@@ -23,4 +23,15 @@ min(int a[],int n)
   return(index);
 }
 
+ average(int a[],int n)
+ {
+   int i;
+   float sum=0;
+   for(i=0;i<n;i++)
+   {
+     sum=sum+a[i];
+   }
+   return(sum/n);
+ }
+
 
