@@ -73,7 +73,7 @@ int isprime(int i)
     return 0;
 }
 
-int factors(int a[],int n)
+int factors(int n,int a[])
 {
   int count=0;
   int i=2;
