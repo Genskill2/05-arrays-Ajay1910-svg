@@ -12,4 +12,15 @@ max(int x[],int k)
   return(t);
 }
 
+min(int a[],int n)
+{
+  int c,index=0;
+  for(c=1;c<n;c++)
+  {
+    if(a[c]<min)
+      index=c;
+  }
+  return(index);
+}
+
 
