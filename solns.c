@@ -1,6 +1,6 @@
 /* Enter your solutions in this file */
 
-max(int x[],int k)
+int max(int x[],int k)
 {
   int t,i;
   t=x[0];
@@ -12,7 +12,7 @@ max(int x[],int k)
   return(t);
 }
 
-min(int a[],int n)
+int min(int a[],int n)
 {
   int c,index=0;
   for(c=1;c<n;c++)
@@ -23,7 +23,7 @@ min(int a[],int n)
   return(index);
 }
 
- average(int a[],int n)
+ float average(int a[],int n)
  {
    int i;
    float sum=0;
@@ -34,7 +34,7 @@ min(int a[],int n)
    return(sum/n);
  }
 
- mode(int a[],int n)
+ int mode(int a[],int n)
  {
    int maxvalue=0,maxcount=0,i,j;
    for(i=0;i<n;++i)
@@ -53,5 +53,9 @@ min(int a[],int n)
    }
    return(maxvalue);
  }
+
+int factor(int a[],int n)
+{
+  
 
 
