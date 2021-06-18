@@ -56,48 +56,39 @@ int min(int a[],int n)
    return(maxvalue);
  }
 
-int isprime(int i)
+int factors(int num,int arr[])
 {
-  int flag=0;
-  for(int j=2;j<i;j++)
+  int cpy=num;
+  int cnt=0;
+  int cnt1=0;
+  for(int i=2;i<num/2;i++)
   {
-    if(i%j==0)
+    if(num%i==0)
     {
-      flag=1;
-      break;
-    }
-  }
-  if(flag==0)
-    return 1;
-  else
-    return 0;
-}
-
-int factors(int n,int a[])
-{
-  int count=0;
-  int i=2;
-  while(i<n)
-  {
-    if(n%i==0)
-      if(isprime(i)==1)
+      for(int j=2;j<=i;j++)
       {
-        a[count]=i;
-        count++;
-        n=n/i;
-        if(isprime(n)==1)
-        {
-          a[count++];
-          break;
-        }
-        i=2;
+        if(i%j==0)
+          cnt+=1;
       }
-    else continue;
-    else
-      i++;
-  }
-  return count;
+      if(cnt==1)
+      {
+        while(cpy%i==0)
+        {
+          arr[cnt1]=i;
+          cpy/=i;
+          cnt1+=1;
+        }
+        cpy=num;
+      }
+        cnt=0;
+      }
+      else
+        continue;
+    }
+    return cnt1;
 }
+  
+      
   
 
 
