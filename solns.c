@@ -85,7 +85,7 @@ int factors(int a[],int n)
         n=n/i;
         if(isprime(n)==1)
         {
-          a[count++];
+          a[count++]
           break;
         }
         i=2;
@@ -94,7 +94,7 @@ int factors(int a[],int n)
     else
       i++;
   }
-  return count;
+  return(count);
 }
   
 
