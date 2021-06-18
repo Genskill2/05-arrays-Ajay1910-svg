@@ -14,13 +14,15 @@ int max(int x[],int k)
 
 int min(int a[],int n)
 {
-  int c,index=0;
-  for(c=1;c<n;c++)
+  int min=a[0];
+  for(int i=0;i<n;i++)
   {
-    if(a[c]<min)
-      index=c;
+    if(a[i]<min)
+      min=a[i];
+    else
+      continue;
   }
-  return(index);
+  return min;
 }
 
  float average(int a[],int n)
