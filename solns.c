@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <assert.h>
 
-
 int max(int [], int);
 
 int main(void) {
@@ -13,3 +12,14 @@ int main(void) {
   assert (max(y, 1) == 5);
   printf("Max: passed\n");
   }
+max(int x[],int k)
+{
+  int t,i;
+  t=x[0];
+  for(i=1;i<k;i++)
+  {
+    if(x[i]>t)
+      t=x[i];
+  }
+  return(t);
+}
